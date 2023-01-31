@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>days-planner</title>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="day">
+            Plan your days activities Today
+        </div>
+    </div>
+    
+    <form>
+        <div class="content">
+            <DIV class="TIT"> 
+                <label for="title"> TITLE:</label>
+                <input type="text"  id="title">
+            </DIV>
+            <DIV class="DESC"> 
+                <label for="DESCRIBE"> DESCRIPTION:</label>
+                <input type="text"  id="DESCRIBE" class="describtions">
+    
+            </DIV>
+            <DIV class="dates"> 
+                <label for="completedate"> DATE:</label>
+                <input type="date"  id="completedate">
+            </DIV>
+            <button type="submit" id="add-btn">add plan</button>
+        </div>      
+    </form>
+    <div id="task-container" class="containerlist">
+    </div>
+    <script src="index.js"></script>
+</body>
+
