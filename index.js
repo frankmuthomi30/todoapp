@@ -17,16 +17,21 @@ function addTask(event) {
 
   const task = `
     <div class="task">
-      <h4>${title}</h4>
-      <p>${desc}</p>
-      <p>${date}</p>
+      <h2 contentEditable="true">${title}</h2>
+      <p contentEditable="true">${desc}</p>
+      <p contentEditable="true">${date}</p>
       <div class="actions">
         <button class="complete-btn">Complete</button>
         <button class="delete-btn">Delete</button>
+        
       </div>
     </div>
   `;
-  taskContainer.insertAdjacentHTML("beforeend", task);
+
+  const taskElement = document.createElement("div");
+  taskElement.innerHTML = task;
+  taskContainer.appendChild(taskElement);
+
   form.reset();
 }
 
@@ -38,14 +43,18 @@ taskContainer.addEventListener("click", function(event) {
     task.remove();
   } else if (target.classList.contains("complete-btn")) {
     task.classList.toggle("completed");
+    
+    
+
     if (task.classList.contains("completed")) {
       completedCount++;
       uncompletedCount--;
-    } else {
+    } else  {
       completedCount--;
       uncompletedCount++;
     }
-    completedCountDisplay.textContent = completedCount;
-    uncompletedCountDisplay.textContent = uncompletedCount;
+ 
+    }
+   
   }
-});
+);
